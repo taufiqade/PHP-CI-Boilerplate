@@ -23,10 +23,13 @@ class Welcome extends CI_Controller {
 		$this->common_data['_title'] = "Homepage";
 		$this->common_data['_enable_footer'] = false;
 		
+		$ads_component = $this->getView('components/ads');
+
 		$this->loadView([
 			'body-class'=> 'welcome',
 			'content' => [
 				$this->getView('pages/home'),
+				$ads_component
 			]
 		]);
 	}
